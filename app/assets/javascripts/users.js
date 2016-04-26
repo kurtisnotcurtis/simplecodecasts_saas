@@ -35,7 +35,6 @@ $(document).ready(function() {
         exp_year: expYear
       }, stripeResponseHandler);
     }
-    // 
     return false;
   }); // form submission
 
