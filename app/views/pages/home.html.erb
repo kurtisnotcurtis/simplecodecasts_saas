@@ -4,23 +4,24 @@
 </div>
 <div class="row">
   <% if user_signed_in? %>
-    <div class="col-md-6">
+    <div class="col-md-6 text-center clearfix">
       <div class="well">
-        <h2 class="text-center">Your Profile</h2>
-        <% if current_user.profile %>
-          <%= link_to "Edit your profile", "#", class: 'btn btn-default btn-lg' %>
-          <%= link_to "View your profile", user_path(current_user), class: 'btn btn-default btn-lg' %>
+        <h2>Your Profile</h2>
+        <p>Manage your identity within the community.</p>
+        <% if current_user.profile %><br>
+          <%= link_to "Edit your profile",  edit_user_profile_path(current_user), class: 'btn btn-primary btn-lg pull-left' %>
+          <%= link_to "View your profile", user_path(current_user), class: 'btn btn-success btn-lg pull-right' %><br><br>
         <% else %>
           <p>Share your passion with the community.</p>
           <%= link_to "Create your profile!", new_user_profile_path(current_user), class: 'btn btn-default btn-lg btn-block' %>
         <% end %>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 text-center">
       <div class="well">
-        <h2 class="text-center">The Community</h2>
-        <p>Visit the community to meet other developers, entrepreneurs, and investors!</p>
-        <%= link_to "Visit the community", "#", class:"btn btn-success" %>
+        <h2 class>The Community</h2>
+        <p>Visit the community to meet other developers, entrepreneurs, and investors!</p><br>
+        <%= link_to "Visit the community", "#", class:"btn btn-warning btn-lg" %>
       </div>
     </div>
 
